@@ -1,5 +1,4 @@
-# NASA APOD - Descubra o Cosmos no seu Aniversário
-
+# NASA APOD - Descubra o Cosmos no seu Aniversário 2IAA <3 Carlos
 Este projeto consiste em um site que utiliza a API APOD (Astronomy Picture of the Day) da NASA para mostrar qual foi a imagem astronômica capturada no dia do seu aniversário (ou em qualquer data selecionada).
 
 ## 🚀 Como Iniciar
