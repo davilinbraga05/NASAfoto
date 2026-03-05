@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos - Exploração NASA APOD</title>
+    <meta name="description" content="Explore o universo na data do seu nascimento através da API oficial da NASA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Decorative background elements -->
+    <div class="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+    <div class="glow-orb" id="orb-1"></div>
+    <div class="glow-orb" id="orb-2"></div>
+
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="badge">NASA API EXPLORER</div>
+            <h1 class="hero-title">Nexus <span>Cosmo</span></h1>
+            <p class="hero-subtitle">Descubra o que o universo estava escondendo no dia em que você nasceu.</p>
+        </header>
+
+        <main class="glass-portal">
+            <section class="search-section">
+                <form id="search-form" class="cosmic-form">
+                    <div class="input-wrapper">
+                        <label for="date-input">Data de Nascimento</label>
+                        <div class="input-field-container">
+                            <input type="date" id="date-input" required>
+                            <div class="input-glow"></div>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit-btn" class="neon-button">
+                        <span class="btn-content">
+                            <span class="text">INICIAR BUSCA</span>
+                            <div class="loader hidden"></div>
+                        </span>
+                    </button>
+                </form>
+            </section>
+
+            <div id="error-message" class="premium-error hidden">
+                <div class="error-icon">!</div>
+                <div class="error-text"></div>
+            </div>
+
+            <section id="result-container" class="apod-content hidden">
+                <div class="content-header">
+                    <div class="title-area">
+                        <span class="category">ASTRONOMY PICTURE OF THE DAY</span>
+                        <h2 id="apod-title">The Pillars of Creation</h2>
+                    </div>
+                    <div class="date-badge" id="apod-date">01 JAN 2000</div>
+                </div>
+
+                <div class="visual-viewport">
+                    <div class="media-frame">
+                        <img id="apod-image" class="hidden" src="" alt="NASA APOD" />
+                        <div class="video-wrapper hidden" id="video-wrapper">
+                            <iframe id="apod-video" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="image-overlay"></div>
+                </div>
+
+                <div class="text-content">
+                    <div class="meta-info">
+                        <div class="meta-item">
+                            <span class="label">Créditos</span>
+                            <span class="value" id="apod-copyright">NASA / JPL</span>
+                        </div>
+                    </div>
+                    <div class="explanation-box">
+                        <p id="apod-explanation"></p>
+                    </div>
+                </div>
+
+                <div class="action-footer">
+                    <button class="secondary-btn" onclick="window.print()">
+                        <span>Salvar PDF</span>
+                    </button>
+                    <a id="hd-link" href="#" target="_blank" class="secondary-btn">
+                        <span>Ver em HD</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <div class="footer-divider"></div>
+            <p>&copy; 2026 Nexus Cosmo. Powered by NASA Open APIs.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
